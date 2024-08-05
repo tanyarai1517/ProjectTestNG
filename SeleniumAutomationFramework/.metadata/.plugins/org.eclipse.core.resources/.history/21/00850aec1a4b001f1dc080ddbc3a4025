@@ -1,0 +1,27 @@
+package testcase;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+
+public class MyFirstTest {
+
+	public static void main(String[] args) throws InterruptedException {
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.zoho.com/en-in/crm/");
+		driver.findElement(By.linkText("SIGN IN")).click();
+		Thread.sleep(3000);
+        driver.findElement(By.xpath("//input[@id='login_id']")).sendKeys("eee.hmritm2020@gmail.com");
+		driver.findElement(By.xpath("//button[@id='nextbtn']")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//input[@id='password']")).sendKeys("Tanya@151798");
+		driver.findElement(By.xpath("//button[@id='nextbtn']")).click();
+		
+		
+
+	}
+
+}

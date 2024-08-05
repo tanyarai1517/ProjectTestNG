@@ -1,0 +1,23 @@
+package testcase;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+
+import base.BaseTest;
+
+public class FirstTest extends BaseTest {
+@Test
+
+public static void LoginTest() throws InterruptedException
+{
+driver.findElement(By.linkText("SIGN IN")).click();
+Thread.sleep(3000);
+driver.findElement(By.xpath("//input[@id='login_id']")).sendKeys("eee.hmritm2020@gmail.com");
+driver.findElement(By.xpath("//button[@id='nextbtn']")).click();
+Thread.sleep(3000);
+driver.findElement(By.xpath("//input[@id='password']")).sendKeys("Tanya@151798");
+driver.findElement(By.xpath("//button[@id='nextbtn']")).click();
+Thread.sleep(3000);
+
+}
+}
